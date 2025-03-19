@@ -1,0 +1,24 @@
+=== FAILED LOGIN ATTEMPT LOG ===
+
+Timestamp: 2025-03-19 13:30:57
+Hostname: DESKTOP-user08
+Local IP: 10.2.0.2
+
+=== IP INFORMATION ===
+Public IP: 138.199.22.104
+City: Tokyo
+Region: Tokyo
+Country: JP
+Location: 35.6895,139.6917
+ISP: AS60068 Datacamp Limited
+
+=== SYSTEM INFORMATION ===
+OS: Windows-11-10.0.26100-SP0
+System: Windows
+Node: DESKTOP-user08
+Release: 11
+Version: 10.0.26100
+Machine: AMD64
+Processor: Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+Python Version: 3.13.2
+Timestamp: 2025-03-19 13:30:57
