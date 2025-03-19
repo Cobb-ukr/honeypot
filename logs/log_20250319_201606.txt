@@ -1,0 +1,24 @@
+=== FAILED LOGIN ATTEMPT LOG ===
+
+Timestamp: 2025-03-19 20:16:06
+Hostname: 
+Local IP: 
+
+=== IP INFORMATION ===
+Public IP: 
+City: 
+Region:
+Country: 
+Location: 
+ISP: 
+
+=== SYSTEM INFORMATION ===
+OS: Windows-11-10.0.26100-SP0
+System: Windows
+Node: 
+Release: 11
+Version: 10.0.26100
+Machine: AMD64
+Processor: Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+Python Version: 3.13.2
+Timestamp: 2025-03-19 20:16:06
